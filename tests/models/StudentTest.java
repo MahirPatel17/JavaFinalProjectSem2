@@ -43,26 +43,26 @@ class StudentTest {
 
     @Test
     void setLastName() {
-        student.setFirstName("Patel");
-        assertEquals("Patel", student.getFirstName());
+        student.setLastName("Patel");
+        assertEquals("Patel", student.getLastName());
     }
 
     @Test
     void setLastNameInvalidEmpty() {
         assertThrows(IllegalArgumentException.class, ()->
-                student.setFirstName(" "));
+                student.setLastName(" "));
     }
 
     @Test
     void setLastNameInvalidNumbersEnd() {
         assertThrows(IllegalArgumentException.class, ()->
-                student.setFirstName("Patel123"));
+                student.setLastName("Patel123"));
     }
 
     @Test
     void setLastNameInvalidNumbers() {
         assertThrows(IllegalArgumentException.class, ()->
-                student.setFirstName("123Patel"));
+                student.setLastName("123Patel"));
     }
 
     @Test
