@@ -1,13 +1,12 @@
 package models;
 
 public class Course {
-    private String courseName, courseType;
-    private int courseCode;
+    private String courseName;
+    private int crn;
 
-    public Course(String courseName, String courseType, int courseCode) {
+    public Course(String courseName, int crn) {
         setCourseName(courseName);
-        setCourseType(courseType);
-        setCourseCode(courseCode);
+        setCrn(crn);
     }
 
     public String getCourseName() {
@@ -22,26 +21,14 @@ public class Course {
             throw new IllegalArgumentException("Names must start with an upper case letter and only contain alphabetic characters");
     }
 
-    public String getCourseType() {
-        return courseType;
+    public int getCrn() {
+        return crn;
     }
 
-    public void setCourseType(String courseType) {
-        courseType = courseType.substring(0,1).toUpperCase() + courseType.substring(1);
-        if (courseType.matches("[A-Z][a-z]*"))
-            this.courseType = courseType;
+    public void setCrn(int crn) {
+        if (crn >= 1000 && crn <= 3000)
+            this.crn = crn;
         else
-            throw new IllegalArgumentException("Names must start with an upper case letter and only contain alphabetic characters");
-    }
-
-    public int getCourseCode() {
-        return courseCode;
-    }
-
-    public void setCourseCode(int courseCode) {
-        if (courseCode >= 1000)
-            this.courseCode = courseCode;
-        else
-            throw new IllegalArgumentException("student number must be greater than 1000");
+            throw new IllegalArgumentException("crn must be between 1000 - 3000");
     }
 }
