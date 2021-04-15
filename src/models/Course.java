@@ -31,4 +31,9 @@ public class Course {
         else
             throw new IllegalArgumentException("crn must be between 1000 - 3000");
     }
+
+    public String toString()
+    {
+        return "Name : " + getCourseName() + "\nCRN : " + getCrn();
+    }
 }

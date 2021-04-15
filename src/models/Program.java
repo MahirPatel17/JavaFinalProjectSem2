@@ -2,12 +2,13 @@ package models;
 
 public class Program {
     private String programName, programType;
-    private int programCode;
+    private int programCode, programFees;
 
-    public Program(String programName, String programType, int programCode) {
+    public Program(String programName, String programType, int programCode, int programFees) {
         setProgramName(programName);
         setProgramType(programType);
         setProgramCode(programCode);
+        setProgramFees(programFees);
     }
 
     public String getProgramName() {
@@ -43,5 +44,20 @@ public class Program {
             this.programCode = programCode;
         else
             throw new IllegalArgumentException("programCode must be between 1 - 100");
+    }
+
+    public int getProgramFees() {
+        return programFees;
+    }
+
+    public void setProgramFees(int programFees) {
+        if (programFees >= 5000 && programFees <= 9000)
+            this.programFees = programFees;
+        else
+            throw new IllegalArgumentException("programFees must be between 5000-9000");
+    }
+
+    public String toString(){
+        return "Name : "+getProgramName()+"\nType : "+getProgramType()+"\nCode : "+getProgramCode()+"\nFees : $"+getProgramFees();
     }
 }

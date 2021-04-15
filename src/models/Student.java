@@ -58,6 +58,6 @@ public class Student {
 
     public String toString()
     {
-        return String.format("%s %s age: %d years", firstName, lastName, getAge());
+        return String.format("Name : %s %s \nage: %d years", firstName, lastName, getAge());
     }
 }

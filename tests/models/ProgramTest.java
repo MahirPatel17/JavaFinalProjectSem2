@@ -11,7 +11,7 @@ class ProgramTest {
 
     @BeforeEach
     void setUp() {
-        program = new Program("Civil","Diploma", 12);
+        program = new Program("Civil","Diploma", 12, 8000);
     }
 
     @Test
