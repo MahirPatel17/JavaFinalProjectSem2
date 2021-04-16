@@ -17,9 +17,9 @@
       </VBox>
       <VBox layoutX="44.0" layoutY="222.0" spacing="10.0">
          <children>
-            <Label fx:id="studentsLabel" text="Students" />
+            <Label fx:id="studentsLabel" prefHeight="35.0" prefWidth="309.0" text="Students Enrolled" />
             <ListView fx:id="studentListView" prefHeight="111.0" prefWidth="511.0" />
-            <Button mnemonicParsing="false" text="Get Enrolled" />
+            <Button mnemonicParsing="false" onAction="#nextButton1" text="Get Enrolled" />
          </children>
       </VBox>
    </children>

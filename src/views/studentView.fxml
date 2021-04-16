@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.StudentViewController">
+   <children>
+      <Label layoutX="23.0" layoutY="100.0" text="First Name" />
+      <Label layoutX="26.0" layoutY="164.0" text="Last Name" />
+      <Label layoutX="26.0" layoutY="230.0" text="Birthday" />
+      <Label layoutX="168.0" layoutY="41.0" text="Enter your information" />
+      <TextField fx:id="firstNameTextField" layoutX="171.0" layoutY="99.0" prefHeight="37.0" prefWidth="355.0" promptText="Enter First Name" />
+      <TextField fx:id="lastNameTextField" layoutX="171.0" layoutY="163.0" prefHeight="37.0" prefWidth="355.0" promptText="Enter Last Name" />
+      <DatePicker fx:id="birthdayDatePicker" layoutX="171.0" layoutY="229.0" prefHeight="37.0" prefWidth="355.0" promptText="Select Birthdate" />
+      <Button layoutX="356.0" layoutY="285.0" mnemonicParsing="false" onAction="#backButton" prefHeight="31.0" prefWidth="89.0" text="Back" />
+      <Button layoutX="198.0" layoutY="285.0" mnemonicParsing="false" onAction="#getEnrolled" prefHeight="31.0" prefWidth="89.0" text="Submit" />
+      <Label fx:id="msgLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="26.0" layoutY="319.0" prefHeight="80.0" prefWidth="541.0" text="Label" wrapText="true" />
+   </children>
+</AnchorPane>

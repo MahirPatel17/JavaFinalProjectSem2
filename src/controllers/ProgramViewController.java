@@ -45,4 +45,9 @@ public class ProgramViewController implements Initializable {
     private void nextButton(ActionEvent event) throws IOException {
         SceneChanger.changeScenes(event,"../views/courseView.fxml","Georgian College");
     }
+
+    @FXML
+    private void nextButton1(ActionEvent event) throws IOException {
+        SceneChanger.changeScenes(event,"../views/studentView.fxml","Georgian College");
+    }
 }
